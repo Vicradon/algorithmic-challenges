@@ -5,6 +5,7 @@ def pairwise(arr, arg):
   store = []
   for i in arr:
     for j in range(arr.index(i)+1, len(arr)):
+      print(j, arr[j])
       if (i + arr[j] == arg):
         if ([i, arr[j], arr.index(i)+j] not in store):
           store.append([i, arr[j], arr.index(i)+j])
@@ -27,7 +28,8 @@ def pairwise(arr, arg):
   return reduce(lambda a, b: a + b, finalStore)
 
 
-print(pairwise([1, 4, 2, 3, 0, 5], 7))
-print(pairwise([7, 9, 11, 13, 15], 20))
-print(pairwise([1, 1, 2], 3))
-print(pairwise([1, 8, 9, 1, 5, 2], 3))
+# print(pairwise([1, 4, 2, 3, 0, 5], 7))
+# print(pairwise([7, 9, 11, 13, 15], 20))
+# print(pairwise([1, 1, 2], 3))
+# print(pairwise([1, 8, 9, 1, 5, 2], 3))
+print(pairwise([1, 1, 1], 2))
