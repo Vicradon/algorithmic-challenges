@@ -6,7 +6,6 @@ const permutator = (...inputArr) => {
       result.push(m)
     } else {
       for (let i = 0; i < arr.length; i++) {
-        debugger;
         let curr = arr.slice();
         let next = curr.splice(i, 1);
         permute(curr.slice(), [...m, ...next])
